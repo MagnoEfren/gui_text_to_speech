@@ -6,7 +6,6 @@ from tkinter import ttk
 from tkinter import filedialog, messagebox
 import pyttsx3
 
-
 def open_file():
 	filepath = filedialog.askopenfilename(title= 'Seleccione archivo',
 		filetype = (('archivo txt', '*.txt*'), ('Todos', '*.*')))
@@ -54,7 +53,6 @@ def save_sound():
 	else:
 		messagebox.showerror('Error', 'No hay un texto para grabar')
 
-
 window = Tk() 
 window.geometry('600x400+400+100')
 window.title('Texto a Voz')
@@ -87,13 +85,9 @@ frame_text.rowconfigure(0, weight=1)
 frame_control.columnconfigure([0,1], weight=1)
 frame_control.rowconfigure([0,1,2,3,4,5,6,7,8], weight=1)
 
-
-
 text = ScrolledText(frame_text, font = ('Corbel', 12, 'italic'), insertbackground= 'blue',
 	bg= 'black', fg= 'white')
 text.grid(column=0, row=0, sticky= 'nsew')
-
-
 
 button_open = Button(frame_control,image = image_file,compound= 'left',text= 'ABRIR ARCHIVO',
 font= ('Arial', 11, 'bold') , bg= 'blue', command= open_file)
